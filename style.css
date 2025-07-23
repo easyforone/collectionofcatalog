@@ -13,8 +13,73 @@ h2 {
     font-size: 16px;
 }
 
+.clickable-title{
+    cursor: pointer;
+}
+
+.popup-note{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background: lightyellow;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 300px;
+    height: 300px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    z-index: 999;
+}
+
+#popup-toggle:not(:checked) ~ .popup-note {
+    display: none;
+}
+
+#popup-a14:not(:checked) ~ .popup-note {
+    display: none;
+}
+
+#popup-b11:not(:checked) ~ .popup-note {
+    display: none;
+}
+
+#popup-e1:not(:checked) ~ .popup-note {
+    display: none;
+}
+
+
+.close-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+p{
+    line-height: 24px;
+}
+
 details {
     cursor: pointer;
+}
+details img {
+    cursor: default;
+
+}
+
+
+.help:hover {
+    background-color: orange;
+}
+
+details[open] > .help{
+    background-color: orange;
 }
 
 summary:hover{
@@ -30,24 +95,21 @@ details[open] > summary {
 }
 
 
-summary::marker {
-  color: black;
-  background-color: green;
+.popup-wrapper {
+    display: flex;
+    flex: 0 0 100px;
+    position: relative;
 }
 
 
-
-
 img {
-    margin-left:50px;
-    width:200px;
+    margin-left:20px;
+    margin-top:20px;
+    margin-bottom:20px;
+    width:100px;
 }
 
 figure:hover {
     width: 300px;
-}
-
-.last {
-    margin-left: ;
 }
 
